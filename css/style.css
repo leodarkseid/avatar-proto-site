@@ -11,6 +11,70 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(../images/back.png) linear-gradient(100deg, #7ea6c3, #1d2d54);
+    background: url("../images/back.png"), linear-gradient(100deg, #7ea6c3, #1d2d54);
     background-size: 100%;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card{
+    position: relative;
+    width: 550px;
+    height: 350px;
+    margin: 50px;
+    display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(180deg, #7ea6c3, #1d2d54);
+}
+.container .card img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.container .card:hover img{left:73%; height: 500px;}
+.container .card .content{
+    position: relative;
+    width: 40%;
+    left: 20px;
+    padding: 20px 20px 20px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content{
+    left: 20px;
+    opacity:1;
+    visibility: visible;
+}
+
+.container .card .content h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+.container .card .content p{
+    color:white;
+}
+.container .card .content a{
+    position: relative;
+    color: #263357;
+    background: white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+
 }
